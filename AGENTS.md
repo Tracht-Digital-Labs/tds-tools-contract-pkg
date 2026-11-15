@@ -24,6 +24,7 @@ npm run test:run                # vitest
 - Tool `id` and `slug` are globally unique; `composeToolPacks` throws on a collision.
 - Stay dependency-free. Never add an `astro` dependency.
 - Labels, names and descriptions are German editable copy in the manifest, never inlined in a site page.
+- Follows the TDS quality standard (`../tds-ops/standards/quality.md`): no AI slop, clean code.
 
 ## Topic files
 
