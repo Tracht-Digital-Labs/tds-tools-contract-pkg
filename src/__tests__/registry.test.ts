@@ -11,7 +11,7 @@ const tool = (over: Partial<ToolDef> & Pick<ToolDef, "id" | "slug">): ToolDef =>
   name: "Tool",
   category: "developer",
   description: "Ein Tool",
-  component: "@tracht-digital-solutions/tds-tool-x/tools/X.astro",
+  component: "@tracht-digital-labs/tds-tool-x/tools/X.astro",
   ...over,
 });
 

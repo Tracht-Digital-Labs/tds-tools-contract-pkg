@@ -1,4 +1,4 @@
-# @tracht-digital-solutions/tds-tools-contract
+# @tracht-digital-labs/tds-tools-contract
 
 The **tools-platform contract** — the SDK the public tools site (`tds-tools-frontend`) and
 every tool package (`tds-tool-*`) build against. It is the tools-site twin of
@@ -14,7 +14,7 @@ imports each package's manifest and folds it into one static `dist/`.
 ## Install
 
 ```bash
-npm install @tracht-digital-solutions/tds-tools-contract
+npm install @tracht-digital-labs/tds-tools-contract
 ```
 
 Needs a GitHub PAT with `read:packages` (via `~/.npmrc` or the `NPM_TOKEN` env
@@ -26,7 +26,7 @@ A package's entry exports one `ToolPackManifest` via `defineToolPack`. A single
 package may register several related tools (a "pack"):
 
 ```ts
-import { defineToolPack, defineTool } from "@tracht-digital-solutions/tds-tools-contract";
+import { defineToolPack, defineTool } from "@tracht-digital-labs/tds-tools-contract";
 
 export default defineToolPack({
   id: "media",
@@ -41,7 +41,7 @@ export default defineToolPack({
       description: "Bilder verkleinern & komprimieren — direkt im Browser.",
       icon: "image",
       keywords: ["bild", "komprimieren", "resize"],
-      component: "@tracht-digital-solutions/tds-tool-media/tools/ImageCompress.astro",
+      component: "@tracht-digital-labs/tds-tool-media/tools/ImageCompress.astro",
     }),
     defineTool({
       id: "pdf-tools",
@@ -49,7 +49,7 @@ export default defineToolPack({
       name: "PDF-Werkzeuge",
       category: "media",
       description: "PDFs zusammenführen, teilen und komprimieren.",
-      component: "@tracht-digital-solutions/tds-tool-media/tools/PdfTools.astro",
+      component: "@tracht-digital-labs/tds-tool-media/tools/PdfTools.astro",
       premiumDefault: true,
       priceCentsDefault: 500,
     }),
@@ -64,9 +64,9 @@ never a local relative path.
 
 ```js
 // astro.config.mjs
-import { toolHost } from "@tracht-digital-solutions/tds-tools-contract/astro";
-import qr from "@tracht-digital-solutions/tds-tool-qr";
-import media from "@tracht-digital-solutions/tds-tool-media";
+import { toolHost } from "@tracht-digital-labs/tds-tools-contract/astro";
+import qr from "@tracht-digital-labs/tds-tool-qr";
+import media from "@tracht-digital-labs/tds-tool-media";
 
 export default defineConfig({
   integrations: [react(), toolHost({ packs: [qr, media] })],

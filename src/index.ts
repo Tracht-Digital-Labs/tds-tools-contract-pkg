@@ -1,5 +1,5 @@
 /**
- * `@tracht-digital-solutions/tds-tools-contract` — the SDK the public tools site
+ * `@tracht-digital-labs/tds-tools-contract` — the SDK the public tools site
  * and every tool package build against. Pure types + build-time composition
  * helpers; the Astro host glue lives in the `./astro` subexport.
  *
